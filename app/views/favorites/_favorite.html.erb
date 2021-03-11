@@ -1,13 +1,3 @@
-<ul class="list-unstyled">
-    <li class="media mb-3">
-        <div class="media-body">
-            <div>
-                <% likes.each do |like| %>
-                    <p class"mb-0"><%= like.micropost.content %></p>    
-                <% end %>
-            </div>
-        </div>
-    </li>
-</ul>
-
-
+<% likes.each do |like| %>
+<%= like.micropost.content %>
+<% end %>
