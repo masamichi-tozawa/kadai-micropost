@@ -12,6 +12,7 @@ class User < ApplicationRecord
     has_many :followers, through: :reverses_of_relationship, source: :user
     
     has_many :favorites, dependent: :destroy
+    has_many :likes, through: :favorites
     
     def follow(other_user)
         unless self == other_user
