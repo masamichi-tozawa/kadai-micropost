@@ -1,10 +1,10 @@
 <ul class="list-unstyled">
   <% likes.each do |like| %>
     <li class="media mb-3">
-      <img class="mr-2 rounded" src="<%= gravatar_url(like.user, { size: 50 }) %>" alt="">
+      <img class="mr-2 rounded" src="<%= gravatar_url(like.micropost.user, { size: 50 }) %>" alt="">
       <div class="media-body">
         <div>
-          <%= link_to like.user.name, user_path(like.user) %> <span class="text-muted">posted at <%= like.micropost.created_at %></span>
+          <%= link_to like.micropost.user.name, user_path(like.user) %> <span class="text-muted">posted at <%= like.micropost.created_at %></span>
         </div>
         <div>
             <p class="mb-0"><%= like.micropost.content %></p>
